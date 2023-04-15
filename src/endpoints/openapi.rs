@@ -3,7 +3,6 @@ use utoipa::OpenApi;
 
 #[derive(OpenApi)]
 #[openapi(components(schemas(HttpErrMessage,)))]
-// TODO: paths are dynamic
 
 pub struct ApiDoc;
 

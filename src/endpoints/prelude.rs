@@ -1,4 +1,3 @@
-pub use crate::db::Conn;
 pub use crate::endpoints::AppState;
 pub use axum::extract::*;
 use axum::http::StatusCode;
@@ -67,14 +66,6 @@ pub fn err500(message: &str) -> impl IntoResponse {
 
 pub fn errconn() -> impl IntoResponse {
     err500("db error")
-}
-
-pub fn err_pdf_init() -> impl IntoResponse {
-    err500("PDF init error")
-}
-
-pub fn err_pdf_build() -> impl IntoResponse {
-    err500("PDF build failure")
 }
 
 #[instrument(level = "warn")]
